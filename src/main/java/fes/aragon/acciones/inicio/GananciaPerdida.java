@@ -14,13 +14,16 @@ import java.io.IOException;
 public class GananciaPerdida extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GananciaPerdida.class.getResource("main.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(GananciaPerdida.class.getResource("/fes/aragon/acciones/main.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(getClass().getResource("/fes/aragon/acciones/css/style.css").toExternalForm());
+        stage.setTitle("ACCIONES");
+
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
-
+/*
     public static void main(String[] args) {
         Cola<Acciones> gananciaPerdida = new Cola<>();
         ManejoArchivos <String> archivoReporte = new ManejoArchivos<>();
@@ -118,5 +121,5 @@ public class GananciaPerdida extends Application {
         }else {
             archivoReporte.escribirEnArchivo("Reporte.txt", "Pérdida Total: " + totalVenta);
         }
-    }
+    }*/
 }

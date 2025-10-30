@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="fes.aragon.acciones.controller.Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle fx:id="header" arcHeight="5.0" arcWidth="5.0" height="184.0" layoutX="-39.0" layoutY="-29.0" stroke="BLACK" strokeType="INSIDE" width="943.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.10192420333623886" green="0.03400000184774399" blue="0.3400000035762787" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.04450000077486038" blue="0.8899999856948853" opacity="0.9655172228813171" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="136.0" fitWidth="135.0" layoutX="18.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/accionesLogo.png" />
+         </image>
+      </ImageView>
+      <VBox fx:id="fileArea" alignment="CENTER" layoutX="58.0" layoutY="190.0" prefHeight="459.0" prefWidth="788.0">
+         <children>
+            <ImageView fitHeight="126.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true" translateY="-60.0">
+               <image>
+                  <Image url="@imagenes/documento.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="24.0" prefWidth="216.0" text="Arrastra tu archivo CSV a esta zona" translateY="-15.0" />
+            <Label text="o" translateY="5.0" />
+            <Button fx:id="buttonElegirArchivo" mnemonicParsing="false" prefHeight="52.0" prefWidth="421.0" text="Elegir el archivo en mi ordenador" translateY="30.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
