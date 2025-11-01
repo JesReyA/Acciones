@@ -8,6 +8,7 @@ import unam.fes.aragon.dinamicas.cola.Cola;
 
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -23,8 +24,8 @@ public class GananciaPerdida extends Application {
         stage.setResizable(false);
         stage.show();
     }
-/*
-    public static void main(String[] args) {
+
+    public File obtenerReporte(String nombreArchivo) {
         Cola<Acciones> gananciaPerdida = new Cola<>();
         ManejoArchivos <String> archivoReporte = new ManejoArchivos<>();
         FileReader archivo;
@@ -41,7 +42,7 @@ public class GananciaPerdida extends Application {
         archivoReporte.escribirEnArchivo("Reporte.txt", "Ganancia o Pérdida en Compra-Venta de Acciones" + "\n\n");
 
         try{
-            archivo = new FileReader("Acciones.csv");
+            archivo = new FileReader(nombreArchivo);
             lector= new BufferedReader(archivo);
             while((cadena = lector.readLine()) != null){
                 //Division de la cadena
@@ -121,5 +122,6 @@ public class GananciaPerdida extends Application {
         }else {
             archivoReporte.escribirEnArchivo("Reporte.txt", "Pérdida Total: " + totalVenta);
         }
-    }*/
+        return null; //temporal
+    }
 }

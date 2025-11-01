@@ -2,6 +2,7 @@ module fes.aragon.acciones {
     requires javafx.controls;
     requires javafx.fxml;
     requires Herramientas;
+    //requires Herramientas;
 
 
     opens fes.aragon.acciones to javafx.fxml;
