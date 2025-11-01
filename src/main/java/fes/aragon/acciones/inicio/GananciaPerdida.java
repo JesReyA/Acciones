@@ -25,7 +25,7 @@ public class GananciaPerdida extends Application {
         stage.show();
     }
 
-    public File obtenerReporte(String nombreArchivo) {
+    public void obtenerReporte(String nombreArchivo) {
         Cola<Acciones> gananciaPerdida = new Cola<>();
         ManejoArchivos <String> archivoReporte = new ManejoArchivos<>();
         FileReader archivo;
@@ -122,6 +122,5 @@ public class GananciaPerdida extends Application {
         }else {
             archivoReporte.escribirEnArchivo("Reporte.txt", "Pérdida Total: " + totalVenta);
         }
-        return null; //temporal
     }
 }
