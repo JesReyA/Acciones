@@ -19,7 +19,7 @@ public class Controller {
     GananciaPerdida reporteAcciones = new GananciaPerdida();
     File selectedFile;
     @FXML
-    private Button buttonElegirArchivo, buttonObtenerReporte;
+    private Button buttonObtenerReporte;
 
     @FXML
     public void handleElegirArchivo(ActionEvent event) {
@@ -27,6 +27,10 @@ public class Controller {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         fileChooser.getExtensionFilters().addAll(ex1);
         selectedFile = fileChooser.showOpenDialog(stage);
+        if(selectedFile != null){
+            mostrarAlerta(Alert.AlertType.INFORMATION, "Éxito", "Se eligió el archivo con éxito\n Presiona \"Obtener Reporte\" para generarlo");
+            buttonObtenerReporte.setDisable(false);
+        }
     }
 
     @FXML

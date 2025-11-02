@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 #fileArea{
     -fx-border-color: #C9C9C9;
     -fx-border-radius: 10px;
@@ -8,4 +10,12 @@
 
 #buttonElegirArchivo, #buttonObtenerReporte{
     -fx-background-radius: 10px;
+}
+
+#buttonElegirArchivo, #buttonObtenerReporte, .label{
+    -fx-font-family: "Nunito", sans-serif;
+    -fx-font-optical-sizing: auto;
+    -fx-font-weight: <weight>;
+    -fx-font-style: normal;
+    -fx-font-size: 18px;
 }
